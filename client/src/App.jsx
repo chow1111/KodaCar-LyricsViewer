@@ -40,7 +40,7 @@ const App = () => {
           if (CACHE.has(key)) {
             setLyrics(CACHE.get(key));
           } else {
-            const lyricsRes = await axios.get(`http://localhost:8888/lyrics?title=${encodeURIComponent(currentSong.name)}&artist=${encodeURIComponent(currentSong.artists[0].name)}`);
+            const lyricsRes = await axios.get(`https://kodacar-lyricsviewer.onrender.com/lyrics?title=${encodeURIComponent(currentSong.name)}&artist=${encodeURIComponent(currentSong.artists[0].name)}`);
             CACHE.set(key, lyricsRes.data.lyrics);
             setLyrics(lyricsRes.data.lyrics);
           }
