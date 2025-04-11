@@ -1,7 +1,7 @@
 const express = require('express');
 const axios = require('axios');
 const cors = require('cors');
-require('dotenv').config();
+require('dotenv').config({ path:'/etc/secrets/.env' });
 
 const app = express();
 const PORT = process.env.PORT || 8888;
