@@ -9,6 +9,7 @@ const PORT = process.env.PORT || 8888;
 app.use(cors());
 
 app.get('/lyrics', async (req, res) => {
+  console.log('this is jjs test');
   const { title, artist } = req.query;
 
   try {
